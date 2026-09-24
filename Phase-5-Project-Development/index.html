@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Edugenie - Learning Assistant</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Edugenie</h1>
+            <p>Google Gemini Powered Learning Assistant</p>
+        </header>
+
+        <div class="chat-box" id="chatBox">
+            <div class="welcome">
+                <h2>Welcome to Edugenie 👋</h2>
+                <p>
+                    Ask any educational question and
+                    Edugenie will help you understand it.
+                </p>
+            </div>
+        </div>
+
+        <div class="input-area">
+
+            <textarea
+                id="question"
+                placeholder="Enter your educational question..."
+                rows="3"></textarea>
+
+            <div class="buttons">
+                <button onclick="askQuestion()">
+                    Ask Edugenie
+                </button>
+
+                <button class="clear-btn" onclick="clearChat()">
+                    Clear
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
